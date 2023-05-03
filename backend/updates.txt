@@ -1,0 +1,22 @@
+1. Installed express from express js installation page, created npm init, and pressed enter index.js is the entry point.
+2. Installed mongoose npm install mongoose from mongoose npm site.
+3. Installed nodemon
+4. Created db.js with mongoose code to connect with mongo db and exported the function.
+5. Created index.js and imported the db.js function in it.
+6. Mongoose was failing in db.js, nodemon was getting stuck, so made the db js code try and catch.
+7. Installed express again because node throwed error for not having express.
+8. Brought hello world code from express and its running changing the port to 5000 to avoid conflicts.
+9. Created 2 Routes auth.js and notes.js to take data from user.
+10.Brought in // For parsing application/json app.use(express.json()); in index.js to take json from req.body.
+11. Changed everything to post and created routes in auth.js for signup and login.
+12. Creating mongoose models so that we can store data in mongodb with a set format.
+13. Had issue so fixed it by changing to commonjs syntax const mongoose = require('mongoose');
+14. Create User and Notes models and exported them.
+15. Imported them in Auth.js and it's saving data with the save() method in mongodb.
+16. Added express validator.
+17. Added bcrypt in auth.js signup to store hashed password in database, and when user logs in it compares the hashed password with the new password, if successfull then gives a jwt token.
+18. Added jsonwebtoken and when user logs in or sign's up we give him a token with their _id and mix it with our secret.
+19. So in getUser when user provides us that token we create a middle ware to take that token from the header and check if use jwt.verify to check if the token is valid. if it is then it gives the payload as the response we store the payload id into req.id and then call the next() function. then we find the user by his id in the getUser and send the details of the user.
+20. Created Notes endpoint for adding updating  & fetching all notes & deleting notes.
+
+21. I think this completes the node.js part

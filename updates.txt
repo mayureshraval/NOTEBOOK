@@ -1,0 +1,8 @@
+1. Created npx create-react-app.
+2. Installed react-router-dom and concurrently.
+3. Added both command in scripts in package json so that we can start the front end and the backend together - 
+ "both": "concurrently \"npm start\" \"nodemon backend/index.js\" "
+4. Brought bootstrap in index.html file.
+5. Created components named Home.js , About.js and Navbar.js.
+6. Utilised react router dom imported browserrouter , routes, route into app.js create routes route for Home and About page.
+7. Imported Link from react router into navbar so that we can use the navlinks for switching pages.
